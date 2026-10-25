@@ -1,0 +1,25 @@
+team_id,team,load_factor,manager_review_speed
+T1,Banking Audit,1.148,1.167
+T2,Insurance Audit,0.997,0.817
+T3,Retail Audit,1.186,0.98
+T4,Energy Audit,1.114,0.726
+T5,Health Audit,0.842,0.793
+T6,Public Audit,1.239,1.11
+T7,Banking Tax,1.143,1.147
+T8,Insurance Tax,1.154,1.281
+T9,Retail Tax,0.858,0.895
+T10,Energy Tax,1.003,0.922
+T11,Health Tax,0.967,0.982
+T12,Public Tax,1.217,0.814
+T13,Banking Advisory,1.09,0.778
+T14,Insurance Advisory,1.17,0.985
+T15,Retail Advisory,1.0,0.836
+T16,Energy Advisory,0.902,1.102
+T17,Health Advisory,1.05,0.962
+T18,Public Advisory,0.829,1.2
+T19,Banking Tech,1.172,1.12
+T20,Insurance Tech,1.084,0.887
+T21,Retail Tech,1.141,1.199
+T22,Energy Tech,0.96,1.183
+T23,Health Tech,1.237,0.932
+T24,Public Tech,1.202,0.873

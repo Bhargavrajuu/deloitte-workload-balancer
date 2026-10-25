@@ -1,0 +1,51 @@
+{
+  "num": "07",
+  "area": "HR",
+  "product": "Productivity vs Workload",
+  "title": "Deloitte Workload Balancer",
+  "company": "Deloitte (Consulting)",
+  "why": "Consulting runs on billable hours and tight deadlines, and long weeks can quietly lower output and raise burnout. This tool finds the point where extra hours stop paying off and where work gets stuck.",
+  "problem": "Management observes declining productivity despite increasing working hours. Build an AI system that analyzes workload, overtime, absenteeism, task completion, employee engagement and performance data to identify potential operational bottlenecks and recommend workload interventions.",
+  "data_note": "600 consultants in 24 engagement teams, 26 weeks of timesheets, task logs and pulse surveys (sample data).",
+  "steps": [
+    {
+      "step": "Collect workload data",
+      "detail": "Hours, overtime, absence, tasks, deadlines, engagement, ratings"
+    },
+    {
+      "step": "Productivity metrics",
+      "detail": "Tasks completed per hour and on-time rate"
+    },
+    {
+      "step": "Find the hours tipping point",
+      "detail": "Quadratic regression of weekly output on hours"
+    },
+    {
+      "step": "Detect abnormal workloads",
+      "detail": "Distance-based outlier score on hours, absence and engagement"
+    },
+    {
+      "step": "Process mining",
+      "detail": "Average wait at each review stage of the deliverable flow"
+    },
+    {
+      "step": "Burnout signals",
+      "detail": "Correlate overtime with absence and engagement"
+    },
+    {
+      "step": "Rebalance simulation",
+      "detail": "Cap hours, move excess work to lighter teams"
+    },
+    {
+      "step": "Bottleneck report",
+      "detail": "AI analyst explains fixes"
+    }
+  ],
+  "questions": [
+    "At how many hours does output start falling?",
+    "Which teams are burning out?",
+    "Where does work get stuck in review?",
+    "What happens if we cap hours at 50?"
+  ],
+  "author": "K Bhargav Raju"
+}

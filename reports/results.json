@@ -1,0 +1,473 @@
+{
+  "title": "Deloitte Workload Balancer",
+  "company": "Deloitte (Consulting)",
+  "kpis": [
+    {
+      "label": "Average week",
+      "value": "49.2 hrs",
+      "note": "24% work over 55"
+    },
+    {
+      "label": "Output peaks at",
+      "value": "53 hrs",
+      "note": "More hours lower output beyond this"
+    },
+    {
+      "label": "Review bottleneck",
+      "value": "Manager review",
+      "note": "35% of a 84-hr cycle"
+    },
+    {
+      "label": "Output after rebalance",
+      "value": "+2.3%",
+      "note": "Cap at 55 hrs"
+    },
+    {
+      "label": "Cycle time after fix",
+      "value": "76 hrs",
+      "note": "from 84 with +2 reviewers"
+    }
+  ],
+  "algorithm": [
+    {
+      "step": "Collect workload data",
+      "output": "600 consultants x 26 weeks"
+    },
+    {
+      "step": "Productivity metrics",
+      "output": "Median 2.41 output points per hour"
+    },
+    {
+      "step": "Find the hours tipping point",
+      "output": "Output peaks at 53.0 hrs/week (R\u00b2 0.62)"
+    },
+    {
+      "step": "Detect abnormal workloads",
+      "output": "20 people flagged by Isolation Forest"
+    },
+    {
+      "step": "Process mining",
+      "output": "Bottleneck: Manager review (29 hrs average wait)"
+    },
+    {
+      "step": "Burnout signals",
+      "output": "Overtime vs absence r = 0.53, vs engagement r = -0.52"
+    },
+    {
+      "step": "Rebalance simulation",
+      "output": "Output +2.3% after rebalancing to 55 hrs"
+    },
+    {
+      "step": "Bottleneck report",
+      "output": "Ready"
+    }
+  ],
+  "tables": {
+    "Team workload board": [
+      {
+        "team": "Public Tech",
+        "people": 25,
+        "avg_hours": 55.49,
+        "output_per_hour": 2.19,
+        "engagement": 3.44,
+        "absence": 1.21,
+        "over_cap": 0.56,
+        "status": "Overloaded"
+      },
+      {
+        "team": "Public Audit",
+        "people": 25,
+        "avg_hours": 55.19,
+        "output_per_hour": 2.17,
+        "engagement": 3.53,
+        "absence": 1.32,
+        "over_cap": 0.56,
+        "status": "Overloaded"
+      },
+      {
+        "team": "Health Tech",
+        "people": 25,
+        "avg_hours": 55.13,
+        "output_per_hour": 2.15,
+        "engagement": 3.45,
+        "absence": 1.02,
+        "over_cap": 0.48,
+        "status": "Overloaded"
+      },
+      {
+        "team": "Retail Audit",
+        "people": 25,
+        "avg_hours": 54.63,
+        "output_per_hour": 2.21,
+        "engagement": 3.46,
+        "absence": 1.22,
+        "over_cap": 0.48,
+        "status": "Overloaded"
+      },
+      {
+        "team": "Public Tax",
+        "people": 25,
+        "avg_hours": 54.1,
+        "output_per_hour": 2.17,
+        "engagement": 3.54,
+        "absence": 1.12,
+        "over_cap": 0.48,
+        "status": "Overloaded"
+      },
+      {
+        "team": "Banking Tech",
+        "people": 25,
+        "avg_hours": 53.84,
+        "output_per_hour": 2.19,
+        "engagement": 3.44,
+        "absence": 1.05,
+        "over_cap": 0.36,
+        "status": "Overloaded"
+      },
+      {
+        "team": "Banking Audit",
+        "people": 25,
+        "avg_hours": 53.69,
+        "output_per_hour": 2.25,
+        "engagement": 3.72,
+        "absence": 1.26,
+        "over_cap": 0.44,
+        "status": "OK"
+      },
+      {
+        "team": "Insurance Advisory",
+        "people": 25,
+        "avg_hours": 53.65,
+        "output_per_hour": 2.27,
+        "engagement": 3.7,
+        "absence": 1.01,
+        "over_cap": 0.44,
+        "status": "OK"
+      },
+      {
+        "team": "Insurance Tax",
+        "people": 25,
+        "avg_hours": 53.65,
+        "output_per_hour": 2.23,
+        "engagement": 3.44,
+        "absence": 1.13,
+        "over_cap": 0.32,
+        "status": "Overloaded"
+      },
+      {
+        "team": "Banking Tax",
+        "people": 25,
+        "avg_hours": 52.49,
+        "output_per_hour": 2.26,
+        "engagement": 3.63,
+        "absence": 0.96,
+        "over_cap": 0.28,
+        "status": "OK"
+      },
+      {
+        "team": "Energy Audit",
+        "people": 25,
+        "avg_hours": 51.8,
+        "output_per_hour": 2.28,
+        "engagement": 3.61,
+        "absence": 0.91,
+        "over_cap": 0.24,
+        "status": "OK"
+      },
+      {
+        "team": "Insurance Tech",
+        "people": 25,
+        "avg_hours": 51.04,
+        "output_per_hour": 2.34,
+        "engagement": 3.7,
+        "absence": 0.86,
+        "over_cap": 0.28,
+        "status": "OK"
+      },
+      {
+        "team": "Retail Tech",
+        "people": 25,
+        "avg_hours": 50.98,
+        "output_per_hour": 2.4,
+        "engagement": 3.69,
+        "absence": 0.92,
+        "over_cap": 0.16,
+        "status": "OK"
+      },
+      {
+        "team": "Banking Advisory",
+        "people": 25,
+        "avg_hours": 49.97,
+        "output_per_hour": 2.37,
+        "engagement": 3.74,
+        "absence": 0.88,
+        "over_cap": 0.16,
+        "status": "OK"
+      },
+      {
+        "team": "Health Advisory",
+        "people": 25,
+        "avg_hours": 49.29,
+        "output_per_hour": 2.39,
+        "engagement": 3.89,
+        "absence": 0.69,
+        "over_cap": 0.16,
+        "status": "OK"
+      },
+      {
+        "team": "Insurance Audit",
+        "people": 25,
+        "avg_hours": 46.94,
+        "output_per_hour": 2.46,
+        "engagement": 3.91,
+        "absence": 0.76,
+        "over_cap": 0.12,
+        "status": "OK"
+      },
+      {
+        "team": "Energy Tax",
+        "people": 25,
+        "avg_hours": 46.61,
+        "output_per_hour": 2.49,
+        "engagement": 3.92,
+        "absence": 0.67,
+        "over_cap": 0.0,
+        "status": "OK"
+      },
+      {
+        "team": "Retail Advisory",
+        "people": 25,
+        "avg_hours": 46.34,
+        "output_per_hour": 2.54,
+        "engagement": 3.82,
+        "absence": 0.85,
+        "over_cap": 0.12,
+        "status": "OK"
+      },
+      {
+        "team": "Energy Tech",
+        "people": 25,
+        "avg_hours": 43.06,
+        "output_per_hour": 2.51,
+        "engagement": 3.71,
+        "absence": 0.66,
+        "over_cap": 0.0,
+        "status": "Has room"
+      },
+      {
+        "team": "Health Tax",
+        "people": 25,
+        "avg_hours": 42.68,
+        "output_per_hour": 2.54,
+        "engagement": 4.02,
+        "absence": 0.85,
+        "over_cap": 0.0,
+        "status": "Has room"
+      },
+      {
+        "team": "Energy Advisory",
+        "people": 25,
+        "avg_hours": 42.41,
+        "output_per_hour": 2.59,
+        "engagement": 3.88,
+        "absence": 0.51,
+        "over_cap": 0.0,
+        "status": "Has room"
+      },
+      {
+        "team": "Retail Tax",
+        "people": 25,
+        "avg_hours": 40.37,
+        "output_per_hour": 2.52,
+        "engagement": 3.91,
+        "absence": 0.46,
+        "over_cap": 0.0,
+        "status": "Has room"
+      },
+      {
+        "team": "Health Audit",
+        "people": 25,
+        "avg_hours": 38.51,
+        "output_per_hour": 2.58,
+        "engagement": 3.99,
+        "absence": 0.56,
+        "over_cap": 0.0,
+        "status": "Has room"
+      },
+      {
+        "team": "Public Advisory",
+        "people": 25,
+        "avg_hours": 38.36,
+        "output_per_hour": 2.59,
+        "engagement": 4.01,
+        "absence": 0.55,
+        "over_cap": 0.0,
+        "status": "Has room"
+      }
+    ],
+    "Flagged consultants": [
+      {
+        "consultant_id": "D7024",
+        "team_id": "T1",
+        "weekly_hours": 61.4,
+        "absence_days": 2.59,
+        "engagement": 2.68
+      },
+      {
+        "consultant_id": "D7030",
+        "team_id": "T7",
+        "weekly_hours": 65.2,
+        "absence_days": 1.87,
+        "engagement": 2.33
+      },
+      {
+        "consultant_id": "D7044",
+        "team_id": "T21",
+        "weekly_hours": 61.1,
+        "absence_days": 2.73,
+        "engagement": 3.39
+      },
+      {
+        "consultant_id": "D7055",
+        "team_id": "T8",
+        "weekly_hours": 64.7,
+        "absence_days": 2.97,
+        "engagement": 2.81
+      },
+      {
+        "consultant_id": "D7098",
+        "team_id": "T3",
+        "weekly_hours": 51.9,
+        "absence_days": 0.23,
+        "engagement": 2.57
+      },
+      {
+        "consultant_id": "D7099",
+        "team_id": "T4",
+        "weekly_hours": 64.0,
+        "absence_days": 1.75,
+        "engagement": 2.92
+      },
+      {
+        "consultant_id": "D7151",
+        "team_id": "T8",
+        "weekly_hours": 59.1,
+        "absence_days": 1.7,
+        "engagement": 1.98
+      },
+      {
+        "consultant_id": "D7238",
+        "team_id": "T23",
+        "weekly_hours": 61.8,
+        "absence_days": 0.93,
+        "engagement": 2.52
+      },
+      {
+        "consultant_id": "D7240",
+        "team_id": "T1",
+        "weekly_hours": 63.3,
+        "absence_days": 2.9,
+        "engagement": 3.29
+      },
+      {
+        "consultant_id": "D7365",
+        "team_id": "T6",
+        "weekly_hours": 58.2,
+        "absence_days": 2.73,
+        "engagement": 3.47
+      },
+      {
+        "consultant_id": "D7382",
+        "team_id": "T23",
+        "weekly_hours": 64.3,
+        "absence_days": 1.42,
+        "engagement": 2.34
+      },
+      {
+        "consultant_id": "D7383",
+        "team_id": "T24",
+        "weekly_hours": 55.1,
+        "absence_days": 2.8,
+        "engagement": 3.87
+      },
+      {
+        "consultant_id": "D7386",
+        "team_id": "T3",
+        "weekly_hours": 57.7,
+        "absence_days": 0.66,
+        "engagement": 2.38
+      },
+      {
+        "consultant_id": "D7410",
+        "team_id": "T3",
+        "weekly_hours": 65.6,
+        "absence_days": 1.76,
+        "engagement": 3.52
+      },
+      {
+        "consultant_id": "D7419",
+        "team_id": "T12",
+        "weekly_hours": 58.5,
+        "absence_days": 1.18,
+        "engagement": 2.39
+      },
+      {
+        "consultant_id": "D7426",
+        "team_id": "T19",
+        "weekly_hours": 64.7,
+        "absence_days": 1.04,
+        "engagement": 2.64
+      },
+      {
+        "consultant_id": "D7458",
+        "team_id": "T3",
+        "weekly_hours": 62.1,
+        "absence_days": 2.41,
+        "engagement": 3.32
+      },
+      {
+        "consultant_id": "D7493",
+        "team_id": "T14",
+        "weekly_hours": 57.0,
+        "absence_days": 2.75,
+        "engagement": 3.18
+      },
+      {
+        "consultant_id": "D7506",
+        "team_id": "T3",
+        "weekly_hours": 64.9,
+        "absence_days": 2.15,
+        "engagement": 2.3
+      },
+      {
+        "consultant_id": "D7531",
+        "team_id": "T4",
+        "weekly_hours": 62.4,
+        "absence_days": 1.85,
+        "engagement": 2.38
+      }
+    ]
+  },
+  "recommendations": [
+    {
+      "title": "Cap routine weeks at 55 hours",
+      "body": "Output peaks near 53 hours. Moving the excess to colleagues with spare time changes total output by +2.3%.",
+      "impact": "+2.3% output"
+    },
+    {
+      "title": "Add 2 reviewers at Manager review",
+      "body": "Deliverables wait 29 hours there. Delegating first-pass review cuts the cycle from 84 to 76 hours.",
+      "impact": "-8 hrs/cycle"
+    },
+    {
+      "title": "Rotate staff out of 7 burnout-risk teams",
+      "body": "Public Tech, Public Audit, Health Tech, Retail Audit combine long weeks with low engagement. Move people in from teams marked 'Has room'.",
+      "impact": "Retention"
+    },
+    {
+      "title": "Check in with 20 flagged consultants",
+      "body": "Their mix of hours, absence and engagement is in the most unusual 5%. Reset scope this week.",
+      "impact": "This week"
+    }
+  ]
+}
